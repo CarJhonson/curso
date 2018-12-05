@@ -57,7 +57,7 @@
 						<a href="deleta-produto.php?id=<?php echo $produto['id']?>" class="btn btn-danger" title="Excluir" onclick = "return confirm('Deletar?')">
 							<i class="far fa-trash-alt"></i>
 						</a>
-						<a href="editar_produto.php?id=<?php echo$produto['id']?>" class="btn btn-warning" title="Editar">
+						<a href="novo-produto.php?id=<?php echo$produto['id']?>" class="btn btn-warning" title="Editar">
 							<i class="fas fa-edit"></i>
 						</a>
 					</td>
