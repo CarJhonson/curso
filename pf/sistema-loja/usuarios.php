@@ -13,9 +13,7 @@ $usuario = $conexao->query($sql_usuarios);
 			<div class="col">
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="principal.php">Principal</a></li>
-			    		<li class="breadcrumb-item"><a href="produtos.php">Produtos</a></li>
-			    		<li class="breadcrumb-item"><a href="categorias.php">Categorias</a></li>
+						<li class="breadcrumb-item"><a href="principal.php">Principal</a></li>			    		
 			    		<li class="breadcrumb-item active" aria-current="usuários.php">Usuários</li>
 					</ol>
 				</nav>
@@ -31,20 +29,19 @@ $usuario = $conexao->query($sql_usuarios);
 	</div>
 		<div class="row">
 			<table class="table table-bordered table-striped table-hover">
-				<tr>
+				<thead> 
 					<th>Id</th>
 					<th>nome</th>
 					<th>e-mail</th>
-					<th>senha</th>
 					<th>Ações</th>
-				</tr>	
+				</thead>	
 
 				<?php while($dados = $usuario->fetch_array(MYSQLI_ASSOC)) { //aqui eu starto o loop dos dados da consulta ?>
+				<tbody>
 				<tr>
-					<td><?php echo $dados['id']; ?></td>
-					<td><?php echo $dados['nome']; ?></td>
-					<td><?php echo $dados['email']; ?></td>
-					<td><?php echo $dados['senha']; ?></td>
+					<td><?php echo $dados['id'];  ?>   </td>
+					<td><?php echo $dados['nome']; ?>  </td>
+					<td><?php echo $dados['email']; ?> </td>					
 					<td>
 						<a href="deleta-usuario.php?id=<?php echo $dados['id']?>" class="btn btn-danger" title="Excluir" onclick = "return confirm('Deletar?')">
 							<i class="far fa-trash-alt"></i>
@@ -54,6 +51,7 @@ $usuario = $conexao->query($sql_usuarios);
 						</a>
 					</td>
 				</tr>
+				</tbody>
 			<?php } //aqui finalizo o loop dos dados ?>		
 			</table>
 		</div>

@@ -34,30 +34,26 @@
 			</div>
 		<?php }?>
 	</div>
-		<form method="post" action="salva-usuario.php">
-			<div class="row">				
-				<div class="col-7">
-					<div class="form-group">
-						<label for="nome">Nome:</label>
-						<input type="text" name="nome" id="nome" class="form-control" required value=" <?php echo (isset($dados_usuario) ? $dados_usuario['nome'] : ''); ?>">
-						<input type="hidden" name="id" value="<?php echo (isset($dados_usuario) ? $dados_usuario['id'] : ''); ?>">
-					</div>
+		<div class="col-3"></div>	
+		<div class="col-6">	
+			<form method="post" action="salva-usuario.php">
+				<div class="form-group">
+					<label for="nome">Nome:</label>
+					<input type="text" name="nome" id="nome" class="form-control" required value=" <?php echo (isset($dados_usuario) ? $dados_usuario['nome'] : ''); ?>">
+					<input type="hidden" name="id" value="<?php echo (isset($dados_usuario) ? $dados_usuario['id'] : ''); ?>">
 				</div>
-				<div class="col-7">
-					<div class="form-group">
-						<label for="email">Email: R$</label>
-						<input type="text" name="email" id="email" class="form-control " required value="<?php echo (isset($dados_usuario) ? $dados_usuario['email'] : '')?>">
-					</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" name="email" id="email" class="form-control " required value="<?php echo (isset($dados_usuario) ? $dados_usuario['email'] : '')?>">
 				</div>
-				<div class="col-7">
-					<div class="form-group">
-						<label for="senha">Senha:</label>
-						<input type="number" name="senha" id="senha" class="form-control" required value="<?php echo (isset($dados_usuario) ? $dados_usuario['senha'] : '') ?>">
-					</div>
-					<button type="submit" class="btn btn-primary float-right">Salvar</button>
-				</div>							
-			</div>
-		</form>
+				<div class="form-group">
+					<label for="senha">Senha:</label>
+					<input type="password" name="senha" id="senha" class="form-control">
+				</div>
+				<button type="submit" class="btn btn-primary float-right">Salvar</button>								
+			</form>
+		<div class="col-3"></div>	
+		</div>	
 </div>
 
 <?php 
