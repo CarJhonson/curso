@@ -9,12 +9,12 @@
 	$senha=$_POST['senha'];
 	$nova_senha = md5($senha);
 
+
 	if($id !=''){
 		if ($senha = '') {
 		$sql_insere_usuario = "UPDATE usuario SET nome = '{$nome}', email = '{$email}' WHERE id = {$id};";
 		}else
 		{
-
 		$sql_insere_usuario = "UPDATE usuario SET nome = '{$nome}', email = '{$email}', senha = '{$nova_senha}' WHERE id = {$id};";
 		}
 		$msg = "Usuario alterado com sucesso!";
