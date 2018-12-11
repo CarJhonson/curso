@@ -7,7 +7,7 @@ require "includes/connection.php";
 $title = "Novo Serviço";
 
 if(isset($_GET['id']) && $_GET['id'] != '') {
-	$id = $_GET['id'];
+	$id = $_GET['id']; 
 	$sql_servico = "SELECT * FROM servicos WHERE id = {$id}";
 	$dados_servico = $conexao->query($sql_servico)->fetch_assoc();
 
@@ -63,7 +63,7 @@ if(isset($_GET['id']) && $_GET['id'] != '') {
 				<div class="form-group">
 					<label for="dt_fim">Data Final:</label>
 					<input type="date" name="dt_fim" id="dt_fim" class="form-control" required  
-					value="<?php echo(isset($dados_servico) ? $dados_servico['dt_fim'] : ''); ?>">
+					value="<?php echo(isset($dados_servico) ? $dados_servico['dt_fim'] : ''); ?>">					
 				</div>
 				<div class="form-group">
 					<label for="status">Status:</label>

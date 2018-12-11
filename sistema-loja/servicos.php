@@ -51,13 +51,13 @@ $servicos = $conexao->query($sql_servicos);
 			<!-- linha de loop -->
 			<?php while($servico = $servicos->fetch_array(MYSQLI_ASSOC)) { ?> <!-- fetch_array extrai dados de apenas um funcioanrio de todos que estão armazenados na variavel funcionários-->
 				<tr>
+					<td><?php echo $servico['id']; ?></td>
 					<td><?php echo $servico['descricao']; ?></td>
 					<td><?php echo number_format($servico['valor'], 2, ',','.'); ?></td>
 					<td><?php echo $servico['id_categoria']; ?></td>
 					<td><?php echo $servico['id_funcionario']; ?></td>
-					<td><?php echo $servico['matricula']; ?></td>
 					<td><?php echo $servico['dt_inicio']; ?></td>
-					<td><?php echo $servico['dt-fim']; ?></td>
+					<td><?php echo $servico['dt_fim']; ?></td>
 					<td><?php echo $servico['status']; ?></td>
 					<td>
 						<a href="novo-servico.php?id=<?php echo $servico['id']; ?>" class="btn btn-warning">

@@ -10,15 +10,16 @@ $dt_inicio 		= $_POST['dt_inicio'];
 $dt_fim			= $_POST['dt_fim'];
 $status			= $_POST['status'];
 
-
+print_r($id);
 if($id != '') {
 	$sql_servico = "UPDATE servicos SET descricao = '{$descricao}', valor = '{$valor}', id_categoria = '{$id_categoria}', id_funcionario = '{$id_funcionario}', dt_inicio = '{$dt_inicio}', dt_fim = '{$dt_fim}', status = '{$status}' WHERE id = {$id};";
 	$msg = "Serviço alterado com sucesso!";
 } else {
-
-	$sql_funcionario = "INSERT INTO servicos (descricao, valor, id_categoria, id_funcionario, dt_inicio, dt_fim, status)
+	
+	$sql_servico = "INSERT INTO servicos (descricao, valor, id_categoria, id_funcionario, dt_inicio, dt_fim, status)
 						VALUES ('{$descricao}', '{$valor}', '{$id_categoria}','{$id_funcionario}',' {$dt_inicio}','{$dt_fim}','{$status}');";
 	$msg = "Serviço salvo com sucesso!";
+	//print_r($sql_servico);
 }
 
 
