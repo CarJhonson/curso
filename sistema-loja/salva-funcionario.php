@@ -6,6 +6,7 @@ $nome 			= $_POST['nome'];
 $id_cargo	 	= $_POST['id_cargo'];
 $cpf 			= $_POST['cpf'];
 $dt_nascimento 	= $_POST['dt_nascimento'];
+$matricula 		= $_POST['matricula'];
 $telefone 		= $_POST['telefone'];
 $email 			= $_POST['email'];
 $sexo 			= $_POST['sexo'];
@@ -17,8 +18,8 @@ if($id != '') {
 	$msg = "Funcionário alterado com sucesso!";
 } else {
 
-	$sql_funcionario = "INSERT INTO funcionarios (nome, id_cargo, cpf, dt_nascimento, telefone, email, sexo, dt_admissao)
-						VALUES ('{$nome}', '{$id_cargo}', '{$cpf}', '{$dt_nascimento}','{$telefone}','{$email}','{$sexo}','{$dt_admissao}');";
+	$sql_funcionario = "INSERT INTO funcionarios (nome, id_cargo, cpf, matricula, dt_nascimento, telefone, email, sexo, dt_admissao)
+						VALUES ('{$nome}', '{$id_cargo}', '{$cpf}','{$matricula}',' {$dt_nascimento}','{$telefone}','{$email}','{$sexo}','{$dt_admissao}');";
 	$msg = "Funcionário salvo com sucesso!";
 }
 

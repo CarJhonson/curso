@@ -1,3 +1,3 @@
 <?php 
-	$conexao = new mysqli("localhost:3309", "root", "", "loja");
+	$conexao = new mysqli("localhost", "root", "senac", "loja");
 ?>

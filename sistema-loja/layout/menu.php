@@ -16,18 +16,15 @@
       <li class="nav-item">
         <a class="nav-link" href="usuarios.php">Usuários</a>
       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="funcionarios.php">Funcionários</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Outros
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Ação</a>
-          <a class="dropdown-item" href="#">Outra ação</a>
+          <a class="dropdown-item" href="funcionarios.php">Funcionarios</a>
+          <a class="dropdown-item" href="cargos.php">Cargos</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Algo mais aqui</a>
+          <a class="dropdown-item" href="servicos.php">Serviços</a>
         </div>
       </li>
       <li class="nav-item">

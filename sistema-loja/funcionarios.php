@@ -51,7 +51,7 @@ $funcionarios = $conexao->query($sql_funcionarios);
 				<th>ações</th>				
 			</tr>
 			<!-- linha de loop -->
-			<?php while($funcionario = $funcionarios->fetch_array(MYSQLI_ASSOC)) { ?> <!-- fetch_array extrai dados de apenas um funcioanrio de todos que estão armazenados na variavesl funcionários-->
+			<?php while($funcionario = $funcionarios->fetch_array(MYSQLI_ASSOC)) { ?> <!-- fetch_array extrai dados de apenas um funcioanrio de todos que estão armazenados na variavel funcionários-->
 				<tr>
 					<td><?php echo $funcionario['id']; ?></td>
 					<td><?php echo $funcionario['nome']; ?></td>
