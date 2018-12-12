@@ -38,7 +38,7 @@ if(isset($_GET['id']) && $_GET['id'] != '') {
 				<div class="form-group">
 					<label for="descricao">Descrição:</label>
 					<input type="text" name="descricao" id="descricao" class="form-control" required  value="<?php echo(isset($dados_servico) ? $dados_servico['descricao'] : ''); ?>">
-					<input type="hidden" name="id" value="<?php echo(isset($dados_usuario) ? $dados_usuario['id'] : ''); ?>">
+					<input type="hidden" name="id" value="<?php echo(isset($dados_servico) ? $dados_servico['id'] : ''); ?>">
 				</div>
 				<div class="form-group">
 					<label for="valor">Valor R$:</label>

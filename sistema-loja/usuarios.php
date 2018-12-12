@@ -36,6 +36,7 @@ $usuarios = $conexao->query($sql_usarios);
 		</div>
 		<p>&nbsp;</p>
 		<table class="table table-bordered table-hover table-striped">
+
 			<thead>
 				<tr>
 					<th>#</th>
@@ -54,7 +55,6 @@ $usuarios = $conexao->query($sql_usarios);
 							<a href="novo-usuario.php?id=<?php echo $usuario['id']; ?>" class="btn btn-warning">
 								<i class="fas fa-edit"></i>
 							</a>
-
 							<a href="exclui-usuario.php?id=<?php echo $usuario['id']; ?>" class="btn btn-danger" onclick="return confirm('Deseja realmente excluir?')">
 								<i class="fas fa-trash"></i>
 							</a>
@@ -64,7 +64,6 @@ $usuarios = $conexao->query($sql_usarios);
 			</tbody>
 		</table>
 	</div>
-
 </div>
 <?php 
 include "layout/footer.php";

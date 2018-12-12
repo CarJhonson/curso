@@ -25,7 +25,7 @@ $servicos = $conexao->query($sql_servicos);
 
 		<div class="row"> <!-- início bloco de comando para mostrar mensagem de erro ou sucesso ao salvar no bd-->
 		<?php if(isset($_GET['msg']) && isset($_GET['tipo_msg'])){ ?>
-			<div class="alert alert-<?php echo $_GET['tipo_msg']; ?> col-12">
+			<div class="alert alert-<?php echo $_GET['tipo_msg']; ?> col-12 esconde">
 				<?php echo $_GET['msg']; ?>
 			</div> 
 		<?php } ?> <!-- fim bloco de comando para mostrar mensagem de erro ou sucesso ao salvar no bd-->
