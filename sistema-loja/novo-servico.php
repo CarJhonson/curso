@@ -8,7 +8,9 @@ $title = "Novo Serviço";
 
 if(isset($_GET['id']) && $_GET['id'] != '') {
 	$id = $_GET['id']; 
-	$sql_servico = "SELECT * FROM servicos WHERE id = {$id}";
+	$sql_servico = "SELECT * FROM servicos AS s
+	LEFT JOIN funcionarios AS f 
+	ON s.id_funcionario = f.id WHERE s.id;";
 	$dados_servico = $conexao->query($sql_servico)->fetch_assoc();
 
 	$title = "Editar Serviços";
@@ -52,8 +54,21 @@ if(isset($_GET['id']) && $_GET['id'] != '') {
 				</div>
 				<div class="form-group">
 					<label for="id_funcionario">Funcionario:</label>
-					<input type="number" name="id_funcionario" id="id_funcionario" class="form-control" required  
-					value="<?php echo(isset($dados_servico) ? $dados_servico['id_funcionario'] : ''); ?>">
+					<select name="id_funcionario" class="form-control" required="">
+						<option value="">Escolha um funcionário</option>
+						<?php while($dados_servico = $dados_servico->fetch_array(MYSQLI_ASSOC)) { ?>
+								<option value="<?php echo $dados_servico['id'] ?>"
+
+									<?php 
+										if(isset($dados_funcionario) && $dados_funcionario['id_cargo'] == $cargo['id']) { echo 'selected="selected"'; }
+									 ?>
+
+									>
+									<?php echo $cargo['descricao'] ?>
+										
+									</option>
+							<?php } ?>
+					</select>
 				</div>
 				<div class="form-group">
 					<label for="dt_inicio">Data Inicial:</label>
