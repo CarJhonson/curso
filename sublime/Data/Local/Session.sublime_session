@@ -1,16 +1,16 @@
 {
 	"folder_history":
 	[
+		"/C/xampp/htdocs/gean/curso/sistema-loja",
 		"/C/xampp/htdocs/curso/sistema-loja"
 	],
 	"last_version": 3176,
-	"last_window_id": 1,
+	"last_window_id": 2,
 	"log_indexing": false,
 	"settings":
 	{
-	},
-	"windows":
-	[
+		"new_window_height": 480.0,
+		"new_window_settings":
 		{
 			"auto_complete":
 			{
@@ -26,36 +26,191 @@
 					]
 				]
 			},
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/C/xampp/htdocs/curso/sistema-loja/novo-funcionario.php",
+				"/C/xampp/htdocs/curso/sistema-loja/novo-servico.php",
+				"/C/xampp/htdocs/curso/sistema-loja/includes/connection.php"
+			],
+			"find":
+			{
+				"height": 0.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 0.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 640.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"di",
+						"div\tTag"
+					],
+					[
+						"in",
+						"input\tTag"
+					],
+					[
+						"ac",
+						"action\tAttr"
+					],
+					[
+						"for",
+						"form\tTag"
+					],
+					[
+						"h",
+						"h1\tTag"
+					],
+					[
+						"da",
+						"dados_servico"
+					],
+					[
+						"op",
+						"option\tTag"
+					]
+				]
+			},
 			"buffers":
 			[
 				{
-					"file": "/C/xampp/htdocs/curso/sistema-loja/includes/connection.php",
+					"file": "/C/xampp/htdocs/gean/curso/sistema-loja/novo-servico.php",
 					"settings":
 					{
-						"buffer_size": 71,
+						"buffer_size": 3467,
 						"encoding": "UTF-8",
 						"line_ending": "Windows"
 					}
 				},
 				{
-					"contents": "<?php \n\tinclude 'layout/header.php';\n\tinclude 'layout/menu.php';\n\n\trequire \"includes/connection.php\";\n\n\t$title = \"Novo funcionario\";\n\n\tif(isset($_GET['id']) && $_GET['id'] != '') {\n\n\t\t$id = $_GET['id'];\n\t\t$sql_funcionario = \"SELECT * FROM funcionarios WHERE id = {$id};\";\n\t\t$funcionario = $conexao->query($sql_funcionario);\n\t\t$dados_funcionario = $funcionario->fetch_assoc();\n\t\t$title = \"Editar funcionario\";\n\t}\n\n\t$sql_funcionario = \"SELECT * FROM funcionarios\";\n\t$funcionario = $conexao->query($sql_funcionario);\n\t$cargos = $conexao->query(\"SELECT * FROM cargo\");\n?>\n\n<div class=\"container\">\n\t<p>&nbsp;</p>\n\t<h1><?php echo $title; ?></h1>\n\t\n\t<div class=\"row\">\n\t\t<div class=\"col\">\n\t\t\t<nav aria-label=\"breadcrumb\">\n\t\t\t  <ol class=\"breadcrumb\">\n\t\t\t    <li class=\"breadcrumb-item\"><a href=\"principal.php\">Principal</a></li>\n\t\t\t    <li class=\"breadcrumb-item\"><a href=\"funcionario.php\">Funcionários</a></li>\n\t\t\t    <li class=\"breadcrumb-item active\" aria-current=\"page\"><?php echo $title; ?></li>\n\t\t\t  </ol>\n\t\t\t</nav>\n\t\t</div>\n\t</div>\n\n\t\t<form method=\"post\" action=\"salva-funcionario.php\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"nome\">Nome:</label>\n\t\t\t\t\t\t<input type=\"text\" name=\"nome\" id=\"nome\" class=\"form-control\" required\n\t\t\t\t\t\tvalue=\"<?php echo (isset($dados_funcionario) ? $dados_funcionario['nome'] : ''); ?>\">\n\n\t\t\t\t\t\t<input type=\"hidden\" name=\"id\" value=\"<?php echo (isset($dados_funcionario) ? $dados_funcionario['id'] : ''); ?>\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<!--<div class=\"col-6\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"cpf\">CPF:</label>\n\t\t\t\t\t\t<input type=\"number\" name=\"cpf\" id=\"cpf\" class=\"form-control price\" required\n\t\t\t\t\t\tvalue=\"<?php echo (isset($dados_funcionario) ? $dados_funcionario['cpf'] : '') ?>\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>-->\n\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"cpf\">CPF:</label>\n\t\t\t\t\t\t<input type=\"number\" name=\"cpf\" id=\"cpf\" class=\"form-control\" required value=\"<?php echo (isset($dados_funcionario) ? $dados_funcionario['cpf'] : '') ?>\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"matricula\">Matrícula:</label>\n\t\t\t\t\t\t<input type=\"number\" name=\"matricula\" id=\"matricula\" class=\"form-control\" required value=\"<?php echo (isset($dados_funcionario) ? $dados_funcionario['matricula'] : '') ?>\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"dt_nascimento\">Data de Nascimento:</label>\n\t\t\t\t\t\t<input type=\"date\" name=\"dt_nascimento\" id=\"dt_nascimento\" class=\"form-control\" required value=\"<?php echo (isset($dados_funcionario) ? $dados_funcionario['dt_nascimento'] : '') ?>\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"telefone\">Telefone:</label>\n\t\t\t\t\t\t<input type=\"text\" name=\"telefone\" id=\"telefone\" class=\"form-control\" required value=\"<?php echo (isset($dados_funcionario) ? $dados_funcionario['telefone'] : '') ?>\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"email\">E-mail:</label>\n\t\t\t\t\t\t<input type=\"text\" name=\"email\" id=\"email\" class=\"form-control\" required value=\"<?php echo (isset($dados_funcionario) ? $dados_funcionario['email'] : '') ?>\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"sexo\">Sexo:</label>\n\t\t\t\t\t\t<input type=\"text\" name=\"sexo\" id=\"sexo\" class=\"form-control\" required value=\"<?php echo (isset($dados_funcionario) ? $dados_funcionario['sexo'] : '') ?>\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"dt_admissao\">Data de admissão:</label>\n\t\t\t\t\t\t<input type=\"date\" name=\"dt_admissao\" id=\"dt_admissao\" class=\"form-control\" required value=\"<?php echo (isset($dados_funcionario) ? $dados_funcionario['dt_admissao'] : '') ?>\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t<label for=\"id_cargo\">Cargo:</label>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<select name=\"id_cargo\" class=\"form-control\" required>\n\t\t\t\t\t\t\t<option value=\"\">Escolha o Cargo</option>\n\t\t\t\t\t\t\t<?php while($cargo = $cargos->fetch_array(MYSQLI_ASSOC)) { ?>\n\t\t\t\t\t\t\t\t<option value=\"<?php echo $cargo['id'] ?>\"\n\n\t\t\t\t\t\t\t\t\t<?php \n\t\t\t\t\t\t\t\t\t\tif(isset($dados_funcionario) && $dados_funcionario['id_cargo'] == $cargo['id']) { echo 'selected=\"selected\"'; }\n\t\t\t\t\t\t\t\t\t ?>\n\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t<?php echo $cargo['descricao'] ?>\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</option>\n\t\t\t\t\t\t\t<?php } ?>\n\t\t\t\t\t\t</select>\n\n\n\t\t\t\t\t</div>\n\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary float-right\">Salvar</button>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</form>\n\n</div>\n\n<?php \n\tinclude 'layout/footer.php';\n?>",
-					"file": "/C/xampp/htdocs/curso/sistema-loja/novo-funcionario.php",
-					"file_size": 4798,
-					"file_write_time": 131892188719933582,
+					"file": "/C/xampp/htdocs/gean/curso/extrair-excel/extrair-excel.php",
 					"settings":
 					{
-						"buffer_size": 4663,
+						"buffer_size": 435,
+						"encoding": "UTF-8",
 						"line_ending": "Windows"
 					}
 				},
 				{
-					"contents": "<?php \ninclude \"layout/header.php\";\ninclude \"layout/menu.php\";\n\nrequire \"includes/connection.php\";\n\n$title = \"Novo Serviço\";\n\nif(isset($_GET['id']) && $_GET['id'] != '') {\n\t$id = $_GET['id']; \n\t$sql_servico = \"SELECT * FROM servicos AS s\n\tLEFT JOIN funcionarios AS f \n\tON s.id_funcionario = f.id WHERE s.id;\";\n\t$dados_servico = $conexao->query($sql_servico)->fetch_assoc();\n\n\t$title = \"Editar Serviços\";\n}\n?>\n\n\n<div class=\"container\">\n\t<p>&nbsp;</p>\n\t<h1><?php echo $title; ?></h1>\n\t<div class=\"row\">\n\t\t<div class=\"col\">\n\t\t\t<nav aria-label=\"breadcrumb\">\n\t\t\t  <ol class=\"breadcrumb\">\n\t\t\t    <li class=\"breadcrumb-item\"><a href=\"principal.php\">Principal</a></li>\n\t\t\t    <li class=\"breadcrumb-item\"><a href=\"servicos.php\">Serviços</a></li>\n\t\t\t    <li class=\"breadcrumb-item active\" aria-current=\"page\"><?php echo $title; ?></li>\n\t\t\t  </ol>\n\t\t\t</nav>\n\t\t</div>\n\t</div>\n\n\t<div class=\"row\">\n\t\t<div class=\"col-3\"></div>\t\t\n\t\t<div class=\"col-6\">\t\t\t\n\t\t\t<form method=\"post\" action=\"salvar-servico.php\">\n\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t<label for=\"descricao\">Descrição:</label>\n\t\t\t\t\t<input type=\"text\" name=\"descricao\" id=\"descricao\" class=\"form-control\" required  value=\"<?php echo(isset($dados_servico) ? $dados_servico['descricao'] : ''); ?>\">\n\t\t\t\t\t<input type=\"hidden\" name=\"id\" value=\"<?php echo(isset($dados_servico) ? $dados_servico['id'] : ''); ?>\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t<label for=\"valor\">Valor R$:</label>\n\t\t\t\t\t<input type=\"text\" name=\"valor\" id=\"valor\" class=\"form-control price\" required  \n\t\t\t\t\tvalue=\"<?php echo(isset($dados_servico) ? $dados_servico['valor'] : ''); ?>\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t<label for=\"id_categoria\">Categoria:</label>\n\t\t\t\t\t<input type=\"number\" name=\"id_categoria\" id=\"id_categoria\" class=\"form-control\" required  \n\t\t\t\t\tvalue=\"<?php echo(isset($dados_servico) ? $dados_servico['id_categoria'] : ''); ?>\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t<label for=\"id_funcionario\">Funcionario:</label>\n\t\t\t\t\t<select name=\"id_funcionario\" class=\"form-control\" required=\"\">\n\t\t\t\t\t\t<option value=\"\">Escolha um funcionário</option>\n\t\t\t\t\t\t<?php while($servico = $dados_servico->fetch_array(MYSQLI_ASSOC)) { ?>\n\t\t\t\t\t\t\t\t<option value=\"<?php echo $dados_servico['id'] ?>\"\n\n\t\t\t\t\t\t\t\t\t<?php \n\t\t\t\t\t\t\t\t\t\tif(isset($dados_funcionario) && $dados_funcionario['id_cargo'] == $cargo['id']) { echo 'selected=\"selected\"'; }\n\t\t\t\t\t\t\t\t\t ?>\n\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t<?php echo $cargo['descricao'] ?>\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</option>\n\t\t\t\t\t\t\t<?php } ?>\n\t\t\t\t\t</select>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t<label for=\"dt_inicio\">Data Inicial:</label>\n\t\t\t\t\t<input type=\"date\" name=\"dt_inicio\" id=\"dt_inicio\" class=\"form-control\" required  \n\t\t\t\t\tvalue=\"<?php echo(isset($dados_servico) ? $dados_servico['dt_inicio'] : ''); ?>\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t<label for=\"dt_fim\">Data Final:</label>\n\t\t\t\t\t<input type=\"date\" name=\"dt_fim\" id=\"dt_fim\" class=\"form-control\" required  \n\t\t\t\t\tvalue=\"<?php echo(isset($dados_servico) ? $dados_servico['dt_fim'] : ''); ?>\">\t\t\t\t\t\n\t\t\t\t</div>\n\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t<label for=\"status\">Status:</label>\n\t\t\t\t\t<input type=\"text\" name=\"status\" id=\"status\" class=\"form-control\" required  \n\t\t\t\t\tvalue=\"<?php echo(isset($dados_servico) ? $dados_servico['status'] : ''); ?>\">\n\t\t\t\t</div>\n\t\t\t\t<button class=\"btn btn-primary float-right\" type=\"submit\">Salvar</button>\n\t\t\t</form>\n\t\t</div>\t\t\n\t\t<div class=\"col-3\"></div>\t\t\n\t</div>\n\n</div>\n<?php \ninclude \"layout/footer.php\";\n?>",
-					"file": "/C/xampp/htdocs/curso/sistema-loja/novo-servico.php",
-					"file_size": 3569,
-					"file_write_time": 131893060201142330,
+					"file": "/C/xampp/htdocs/gean/curso/extrair-excel/processa",
 					"settings":
 					{
-						"buffer_size": 3461,
+						"buffer_size": 0,
 						"encoding": "UTF-8",
 						"line_ending": "Windows"
 					}
@@ -93,13 +248,15 @@
 			},
 			"expanded_folders":
 			[
-				"/C/xampp/htdocs/curso/sistema-loja",
-				"/C/xampp/htdocs/curso/sistema-loja/includes",
-				"/C/xampp/htdocs/curso/sistema-loja/layout"
+				"/C/xampp/htdocs/gean/curso/sistema-loja"
 			],
 			"file_history":
 			[
-				"/C/xampp/htdocs/curso/sistema-loja/novo-servico.php"
+				"/C/xampp/htdocs/gean/curso/extrair excel/extrair excel.php",
+				"/C/xampp/htdocs/gean/curso/extrair ecxel/extrair excel.php",
+				"/C/xampp/htdocs/curso/sistema-loja/novo-funcionario.php",
+				"/C/xampp/htdocs/curso/sistema-loja/novo-servico.php",
+				"/C/xampp/htdocs/curso/sistema-loja/includes/connection.php"
 			],
 			"find":
 			{
@@ -134,30 +291,59 @@
 			"folders":
 			[
 				{
-					"path": "C:\\xampp\\htdocs\\curso\\sistema-loja"
+					"path": "C:\\xampp\\htdocs\\gean\\curso\\sistema-loja"
 				}
 			],
 			"groups":
 			[
 				{
-					"selected": 2,
+					"selected": 1,
 					"sheets":
 					[
 						{
 							"buffer": 0,
-							"file": "/C/xampp/htdocs/curso/sistema-loja/includes/connection.php",
-							"semi_transient": false,
+							"file": "/C/xampp/htdocs/gean/curso/sistema-loja/novo-servico.php",
+							"semi_transient": true,
 							"settings":
 							{
-								"buffer_size": 71,
+								"buffer_size": 3467,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										71,
-										71
+										1066,
+										1066
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/PHP/PHP.sublime-syntax",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 414.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/C/xampp/htdocs/gean/curso/extrair-excel/extrair-excel.php",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 435,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										390,
+										390
 									]
 								],
 								"settings":
@@ -168,65 +354,35 @@
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 2,
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/C/xampp/htdocs/curso/sistema-loja/novo-funcionario.php",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 4663,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										4107,
-										4474
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/PHP/PHP.sublime-syntax",
-									"translate_tabs_to_spaces": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 1620.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 1,
+							"stack_index": 0,
 							"type": "text"
 						},
 						{
 							"buffer": 2,
-							"file": "/C/xampp/htdocs/curso/sistema-loja/novo-servico.php",
+							"file": "/C/xampp/htdocs/gean/curso/extrair-excel/processa",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 3461,
+								"buffer_size": 0,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										2227,
-										2227
+										0,
+										0
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/PHP/PHP.sublime-syntax",
-									"translate_tabs_to_spaces": false
+									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
-								"translation.y": 702.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 0,
+							"stack_index": 2,
 							"type": "text"
 						}
 					]
@@ -268,7 +424,7 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,2,3,-32000,-32000,-1,-1,669,130,130,786",
+			"position": "0,2,3,-1,-1,-1,-1,565,26,26,682",
 			"project": "",
 			"replace":
 			{
@@ -315,7 +471,7 @@
 			"template_settings":
 			{
 			},
-			"window_id": 1,
+			"window_id": 2,
 			"workspace_name": ""
 		}
 	],
